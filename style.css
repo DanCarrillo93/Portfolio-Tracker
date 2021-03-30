@@ -6,8 +6,20 @@
     margin-bottom: 0;
 }
 
-#widget {
-    border-radius: 5px;
+#box {
+    margin-bottom: 0px;
+}
+
+#widget1, #widget2 {
+    border-radius: 10px;
+    border: 5px solid #18ffff;
+    margin-bottom: 7px;
+}
+
+#widget2 {
+    border-radius: 10px;
+    border: 5px solid #76ff03;
+    margin-bottom: 7px;
 }
 
 .nav-wrapper .input-field input[type=search] {
@@ -25,4 +37,18 @@ body{
 
 header {
     padding: 0 1.5rem;
+}
+
+@media only screen and (min-width: 601px) {
+    aside {
+        height: 100vh;
+    }    
+}
+
+form div, form div input {
+    border-radius: 10px !important;
+}
+
+.material-icons {
+    font-size: 25px !important;
 }
