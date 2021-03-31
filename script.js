@@ -24,3 +24,21 @@ $(searchBox).submit(function(event){
     })
     });
 });
+
+$(document).ready(function(){
+    $("#search").autocomplete({
+        data: {
+            "BTC": null,
+            "ETH": null,
+            "LTC": null,
+            "BSV": null,
+            "BCH": null,
+            "DOGE": null,
+            "ETC": null,
+        },
+    });
+});
+
+$(document).ready(function(){
+    $('.modal').modal();
+});
