@@ -1,62 +1,69 @@
-.row, #box  {
-    margin-bottom: 0;
+.row,
+#box {
+	margin-bottom: 0;
 }
 :root {
-    --stock-color: #18ffff;
+	--stock-color: #18ffff;
 }
 
 #searchBox {
-    border-radius: 10px;
-    margin: 1rem 0;
-    height: 36px;
+	border-radius: 10px;
+	margin: 1rem 0;
+	height: 36px;
 }
 
-#modalButton, #modal1 {
-    border-radius: 10px;
-    margin-bottom: 1rem;
+#modalButton,
+#modal1 {
+	border-radius: 10px;
+	margin-bottom: 1rem;
 }
 
-#widget1, #widget2 {
-    border-radius: 10px;
-    border: 5px solid #18ffff;
-    margin-bottom: 7px;
-    transition: all 0.5s ease-in-out;
-
+#widget1,
+#widget2 {
+	border-radius: 10px;
+	border: 5px solid #18ffff;
+	margin-bottom: 7px;
+	transition: all 0.5s ease-in-out;
 }
 
 #widget2 {
-    border-radius: 10px;
-    border: 5px solid #76ff03;
-    margin-bottom: 7px;
+	border-radius: 10px;
+	border: 5px solid #76ff03;
+	margin-bottom: 7px;
 }
 
 main {
-    min-height: 100vh;
+	min-height: 100vh;
 }
 
-#search, .input-field {
-    border-bottom: 0px solid white !important;
-    height: 36px;
-    margin: 0;
-    text-transform: uppercase;
+#search,
+.input-field {
+	border-bottom: 0px solid white !important;
+	height: 36px;
+	margin: 0;
+	text-transform: uppercase;
 }
 
 @media only screen and (min-width: 601px) {
-    aside {
-        height: 100vh;
-    }    
+	aside {
+		height: 100vh;
+	}
+}
 .custom-margin {
-    margin: 1rem !important;
+	margin: 1rem !important;
 }
 
-form div, form div input, .custom-box {
-    border-radius: 10px !important;
+form div,
+form div input,
+.custom-box {
+	border-radius: 10px !important;
 }
 
 .material-icons {
-    font-size: 25px !important;
+	font-size: 25px !important;
 }
 
 .custom-shadow:hover {
-    box-shadow: inset 0px 0px 8px var(--stock-color), 0 0 15px var(--stock-color);
-    transition: all 1s ease-in-out;
+	box-shadow: inset 0px 0px 8px var(--stock-color), 0 0 15px var(--stock-color);
+	transition: all 1s ease-in-out;
+}
