@@ -67,3 +67,8 @@ form div input,
 	box-shadow: inset 0px 0px 8px var(--stock-color), 0 0 15px var(--stock-color);
 	transition: all 1s ease-in-out;
 }
+
+#stockWidget,
+#cryptoWidget {
+	display: none;
+}
