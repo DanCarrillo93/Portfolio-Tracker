@@ -1,6 +1,9 @@
 .row, #box  {
     margin-bottom: 0;
 }
+:root {
+    --stock-color: #18ffff;
+}
 
 #searchBox {
     border-radius: 10px;
@@ -17,6 +20,8 @@
     border-radius: 10px;
     border: 5px solid #18ffff;
     margin-bottom: 7px;
+    transition: all 0.5s ease-in-out;
+
 }
 
 #widget2 {
@@ -40,4 +45,18 @@ main {
     aside {
         height: 100vh;
     }    
+.custom-margin {
+    margin: 1rem !important;
 }
+
+form div, form div input, .custom-box {
+    border-radius: 10px !important;
+}
+
+.material-icons {
+    font-size: 25px !important;
+}
+
+.custom-shadow:hover {
+    box-shadow: inset 0px 0px 8px var(--stock-color), 0 0 15px var(--stock-color);
+    transition: all 1s ease-in-out;
