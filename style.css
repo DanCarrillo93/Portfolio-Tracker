@@ -1,4 +1,4 @@
-.row, #box  {
+.row {
     margin-bottom: 0;
 }
 :root {
@@ -17,9 +17,9 @@
     margin-bottom: 1rem;
 }
 
-#widget1, #widget2 {
+#widget1 {
     border-radius: 10px;
-    border: 5px solid #18ffff;
+    border: 5px solid var(--stock-color);
     margin-bottom: 7px;
     transition: all 0.5s ease-in-out;
 
