@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Rocket Trades</title>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -23,10 +24,24 @@
                          <i class="material-icons white-text">close</i>
                      </div>
                  </form>
+
+                    <div class="row custom-margin">
+                      <div class="col s12 card grey darken-2 darken-1 custom-box">
+                        <div class="card-content white-text">
+                          <span class="card-title">Notes</span>
+                          <input id="notes" type="text" class="validate white-text"></input>
+                        </div>
+                        <div class="card-action">
+                          <a href="#">This is a link</a>
+                          <a href="#">This is a link</a>
+                        </div>
+                      </div>
+                    </div>
+
             </aside>
             <section class="col s12 m8 l9">
                 <section id="box" class="col s12 l6 card-panel black">
-                    <div id="widget1" class="col s12 card-panel black">
+                    <div id="widget1" class="col s12 card-panel black custom-shadow">
                         <h5 id="symbol1" class="cyan-text text-accent-2"></h5>
                         <h5 id="name1" class="cyan-text text-accent-2"></h5>
                         <h5 id="price1" class="cyan-text text-accent-2"></h5>
