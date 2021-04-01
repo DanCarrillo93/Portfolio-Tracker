@@ -18,6 +18,7 @@ $(searchBox).submit(function(event){
     var cryptoSymbols = ["ETH", "BTC", "XRP", "DOGE", "LTC", "BSV", "ETC" ];
     var stockSymbols = ["TSLA", "AAPL", "AMC", "GME"];
 
+
     if ($.inArray(symbol, cryptoSymbols) >= 0) {
         var requestUrl = "https://api.lunarcrush.com/v2?data=assets&key=zf4yj43rpvlvhcn0ln2c&symbol=" + symbol;
         fetch(requestUrl)
@@ -30,6 +31,8 @@ $(searchBox).submit(function(event){
             }
             else {
                 cryptoSearchList.push(symbol);
+                saveSymbolCrypto(cryptoSearchList); //Save LS and Array
+                console.log(cryptoSearchList);
                 $("#cryptoWidget").clone().appendTo("#widgetContainer");
                 symbol2.html(response.data[0].symbol)
                 name2.html(response.data[0].name);
@@ -46,12 +49,14 @@ $(searchBox).submit(function(event){
         .then(function(stock) {
             stock.preventDefault;
             stock.json()
-        .then(function(response) {
-            if ($.inArray(symbol, stockSearchList) > -1) {
-                return;  
-            }
-            else {
+            .then(function(response) {
+                if ($.inArray(symbol, stockSearchList) > -1) {
+                    return;  
+                }
+                else {
                 stockSearchList.push(symbol);
+                saveSymbolStock(stockSearchList); //Save Ls and Array
+                console.log(stockSearchList);
                 $("#stockWidget").clone().appendTo("#widgetContainer");
                 symbol1.html(response.symbol)
                 name1.html(response.companyName);
@@ -88,3 +93,13 @@ $(document).ready(function() {
 $(document).ready(function(){
     $('.modal').modal();
 });
+
+function saveSymbolCrypto(symbol) {
+    localStorage.setItem("Crypto" , JSON.stringify(symbol));
+};
+
+function saveSymbolStock(symbol) {
+    localStorage.setItem("Stock" , JSON.stringify(symbol));
+};
+
+
