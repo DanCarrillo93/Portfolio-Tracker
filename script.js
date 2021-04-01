@@ -27,10 +27,12 @@ $(searchBox).submit(function(event){
             crypto.json()
         .then(function(response) {
             console.log(response);
+            $("#cryptoWidget").clone().appendTo("#widgetContainer");
             symbol2.html(response.data[0].symbol)
             name2.html(response.data[0].name);
             price2.html("$ " + response.data[0].price);
             percent2.html(response.data[0].percent_change_24h + " %");
+            $("#cryptoWidget").css("display", "block");
         });
         });
     }
@@ -44,10 +46,12 @@ $(searchBox).submit(function(event){
             stock.json()
         .then(function(response) {
             console.log(response);
+            $("#stockWidget").clone().appendTo("#widgetContainer");
             symbol1.html(response.symbol)
             name1.html(response.companyName);
             price1.html("$ " + response.latestPrice);
             percent1.html(response.changePercent*100 + " %");
+            $("#stockWidget").css("display", "block");
         });
         });
     }
