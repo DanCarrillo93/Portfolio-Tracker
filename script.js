@@ -93,13 +93,11 @@ $(document).ready(function() {
 $(document).ready(function(){
     $('.modal').modal();
 });
-
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
 function saveSymbolCrypto(symbol) {
     localStorage.setItem("Crypto" , JSON.stringify(symbol));
 };
-
 function saveSymbolStock(symbol) {
     localStorage.setItem("Stock" , JSON.stringify(symbol));
-};
-
-

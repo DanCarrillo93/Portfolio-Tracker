@@ -16,16 +16,23 @@
 <body class="black">
 
     <header class="white row col s12">
-        <nav>
-            <div class="nav-wrapper white">
-              <a href="index.html" class="brand-logo black-text">Rocket Trades 🚀</a>
-              <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <nav class="white">
+            <div class="nav-wrapper">
+              <a href="index.html" class="black-text custom-font">Rocket Trades 🚀</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
+              <ul class="right hide-on-med-and-down">
                 <li><a href="PopularStocks.html" class="black-text">Popular Stocks</a></li>
                 <li><a href="PopularCrypto.html" class="black-text">Popular Crypto</a></li>
                 <li><a href="#" class="black-text">Portfolio</a></li>
               </ul>
             </div>
-          </nav>
+        </nav>
+        
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="PopularStocks.html">Popular Stocks</a></li>
+            <li><a href="PopularCrypto.html">Popular Crypto</a></li>
+            <li><a href="#">Portfolio</a></li>
+        </ul>
     </header>
     
     <main class="custom-box-margin">

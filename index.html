@@ -10,17 +10,23 @@
         crossorigin="anonymous"></script>
     </head>
     <body class="black">
-        <header class="white column col s12">
-            <nav class="col column s12">
-                <div class="nav-wrapper white col s12">
-                  <a href="index.html" class="brand-logo black-text col s12">Rocket Trades 🚀</a>
-                  <ul class="right col s12">
+        <header>
+            <nav class="white">
+                <div class="nav-wrapper">
+                  <a href="index.html" class="black-text custom-font">Rocket Trades 🚀</a>
+                  <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
+                  <ul class="right hide-on-med-and-down">
                     <li><a href="PopularStocks.html" class="black-text">Popular Stocks</a></li>
                     <li><a href="PopularCrypto.html" class="black-text">Popular Crypto</a></li>
                     <li><a href="#" class="black-text">Portfolio</a></li>
                   </ul>
                 </div>
             </nav>
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="PopularStocks.html">Popular Stocks</a></li>
+                <li><a href="PopularCrypto.html">Popular Crypto</a></li>
+                <li><a href="#">Portfolio</a></li>
+            </ul>
         </header>
         <main class="row">
             <aside class="col s12 m4 l3 grey darken-4">
