@@ -33,7 +33,6 @@ $(searchBox).submit(function(event){
                 else {
                     cryptoSearchList.push(  );
                     saveSymbolCrypto(cryptoSearchList); //Save LS and Array
-                    console.log(cryptoSearchList);
                     $("#cryptoWidget").clone().appendTo("#widgetContainer");
                     symbol2.html(response.data[0].symbol)
                     name2.html(response.data[0].name);
@@ -57,7 +56,6 @@ $(searchBox).submit(function(event){
                 else {
                     stockSearchList.push(symbol);
                     saveSymbolStock(stockSearchList); //Save Ls and Array
-                    console.log(stockSearchList);
                     $("#stockWidget").clone().appendTo("#widgetContainer");
                     symbol1.html(response.symbol)
                     name1.html(response.companyName);
@@ -94,15 +92,15 @@ $(document).ready(function() {
 $(document).ready(function(){
     $('.modal').modal();
 });
-
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
 function saveSymbolCrypto(symbol) {
     localStorage.setItem("Crypto" , JSON.stringify(symbol));
 };
-
 function saveSymbolStock(symbol) {
     localStorage.setItem("Stock" , JSON.stringify(symbol));
 };
-
 
 function callLocalStorage() {
     var storedCrypto = JSON.parse(localStorage.getItem("Crypto"));
