@@ -30,7 +30,7 @@ $(searchBox).submit(function(event){
                     return;  
                 }
                 else {
-                    cryptoSearchList.push(  );
+                    cryptoSearchList.push(symbol);
                     saveSymbolCrypto(cryptoSearchList); //Save LS and Array
                     $("#cryptoWidget").clone().appendTo("#widgetContainer");
                     symbol2.html(response.data[0].symbol)
