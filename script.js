@@ -101,3 +101,4 @@ function saveSymbolCrypto(symbol) {
 };
 function saveSymbolStock(symbol) {
     localStorage.setItem("Stock" , JSON.stringify(symbol));
+};
