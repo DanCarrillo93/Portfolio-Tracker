@@ -10,17 +10,23 @@
         crossorigin="anonymous"></script>
     </head>
     <body class="black">
-        <header class="white row col s12">
-            <nav>
-                <div class="nav-wrapper white">
-                  <a href="#" class="brand-logo black-text">Rocket Trades 🚀</a>
-                  <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#" class="black-text">Popular Stocks</a></li>
-                    <li><a href="#" class="black-text">Popular Crypto</a></li>
+        <header>
+            <nav class="white">
+                <div class="nav-wrapper">
+                  <a href="index.html" class="black-text custom-font">Rocket Trades 🚀</a>
+                  <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
+                  <ul class="right hide-on-med-and-down">
+                    <li><a href="PopularStocks.html" class="black-text">Popular Stocks</a></li>
+                    <li><a href="PopularCrypto.html" class="black-text">Popular Crypto</a></li>
                     <li><a href="#" class="black-text">Portfolio</a></li>
                   </ul>
                 </div>
-              </nav>
+            </nav>
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="PopularStocks.html">Popular Stocks</a></li>
+                <li><a href="PopularCrypto.html">Popular Crypto</a></li>
+                <li><a href="#">Portfolio</a></li>
+            </ul>
         </header>
         <main class="row">
             <aside class="col s12 m4 l3 grey darken-4">
@@ -44,34 +50,42 @@
                         <a href="#!" class="modal-close waves-effect waves btn-flat">Close</a>
                     </div>
                 </div>
-                    <div class="row custom-margin">
-                      <div class="col s12 card grey darken-2 darken-1 custom-box">
-                        <div class="card-content white-text">
-                          <span class="card-title">Notes</span>
-                          <input id="notes" type="text" class="validate white-text"></input>
-                        </div>
-                        <div class="card-action">
-                          <a href="#">This is a link</a>
-                          <a href="#">This is a link</a>
-                        </div>
-                      </div>
-                    </div>
             </aside>
             <section id="widgetContainer" class="col s12 m8 l9">
                 <section id="stockWidget" class="col s12 l6 card-panel black">
                     <div id="widget1" class="col s12 card-panel black custom-shadow-stocks">
-                        <h5 id="symbol1" class="cyan-text text-accent-2"></h5>
+                        <div class="custom-flex">
+                            <h5 id="symbol1" class="cyan-text text-accent-2"></h5>
+                            <a class="btn-floating btn-medium waves-effect waves-light black custom-shadow-stocks">
+                                <i class="material-icons cyan-text text-accent-2 custom-shadow-stocks">add</i>
+                            </a>
+                        </div>
                         <h5 id="name1" class="cyan-text text-accent-2"></h5>
                         <h5 id="price1" class="cyan-text text-accent-2"></h5>
-                        <h5 id="percent1" class="cyan-text text-accent-2"></h5>
+                        <div class="custom-flex">
+                            <h5 id="percent1" class="cyan-text text-accent-2"></h5>
+                            <a class="btn-floating btn-medium waves-effect waves-light black custom-shadow-stocks">
+                                <i class="material-icons cyan-text text-accent-2 custom-shadow-stocks">close</i>
+                            </a>
+                        </div>
                     </div>
                 </section>
                 <section id="cryptoWidget" class="col s12 l6 card-panel black">
                     <div id="widget2" class="col s12 card-panel black custom-shadow-crypto">
-                        <h5 id="symbol2" class="light-green-text text-accent-3"></h5>
+                        <div class="custom-flex">
+                            <h5 id="symbol2" class="light-green-text text-accent-3"></h5>
+                            <a class="btn-floating btn-medium waves-effect waves-light black custom-shadow-crypto">
+                                <i class="material-icons light-green-text text-accent-3 custom-shadow-crypto">add</i>
+                            </a>
+                        </div>
                         <h5 id="name2" class="light-green-text text-accent-3"></h5>
                         <h5 id="price2" class="light-green-text text-accent-3"></h5>
-                        <h5 id="percent2" class="light-green-text text-accent-3"></h5>
+                        <div class="custom-flex">
+                            <h5 id="percent2" class="light-green-text text-accent-3"></h5>
+                            <a class="btn-floating btn-medium waves-effect waves-light black custom-shadow-crypto">
+                                <i class="material-icons light-green-text text-accent-3 custom-shadow-crypto">close</i>
+                            </a>
+                        </div>
                     </div>
                 </section>
             </section> 

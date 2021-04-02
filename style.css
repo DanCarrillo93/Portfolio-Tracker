@@ -1,10 +1,9 @@
-.row,
-#box {
+.row {
 	margin-bottom: 0;
 }
 
 :root {
-    --crypto-color: #76ff03;
+	--crypto-color: #76ff03;
 	--stock-color: #18ffff;
 }
 
@@ -20,18 +19,17 @@
 	margin-bottom: 1rem;
 }
 
-#widget1,
-#widget2 {
+#widget1 {
 	border-radius: 10px;
-	border: 5px solid #18ffff;
+	border: 5px solid var(--stock-color);
 	margin-bottom: 7px;
 	transition: all 0.5s ease-in-out;
 }
 
 #widget2 {
-    border-radius: 10px;
-    border: 5px solid var(--crypto-color);
-    margin-bottom: 7px;
+	border-radius: 10px;
+	border: 5px solid var(--crypto-color);
+	margin-bottom: 7px;
 }
 
 main {
@@ -66,26 +64,38 @@ form div input,
 }
 
 .custom-shadow-stocks:hover {
-    box-shadow: inset 0px 0px 8px var(--stock-color), 0 0 15px var(--stock-color);
-    transition: all 1s ease-in-out;
+	box-shadow: inset 0px 0px 8px var(--stock-color), 0 0 15px var(--stock-color);
+	transition: all 1s ease-in-out;
 }
 .custom-shadow-crypto:hover {
-    box-shadow: inset 0px 0px 8px var(--crypto-color), 0 0 15px var(--crypto-color);
-    transition: all 1s ease-in-out;
+	box-shadow: inset 0px 0px 8px var(--crypto-color),
+		0 0 15px var(--crypto-color);
+	transition: all 1s ease-in-out;
+}
+.custom-font {
+	font-size: 2rem;
+	padding-left: 1rem;
 }
 
 #popularStockTitle {
-    border-bottom: 2px solid var(--stock-color);
-    margin: 10px 13em;
-    padding: 10px;
+	border-bottom: 2px solid var(--stock-color);
+	margin: 10px 13em;
+	padding: 10px;
 }
 #popularCryptoTitle {
-    border-bottom: 2px solid var(--crypto-color);
-    margin: 10px 13em;
-    padding: 10px;
+	border-bottom: 2px solid var(--crypto-color);
+	margin: 10px 13em;
+	padding: 10px;
 }
 
 #stockWidget,
 #cryptoWidget {
 	display: none;
+}
+
+.custom-flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
