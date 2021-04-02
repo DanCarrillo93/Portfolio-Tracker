@@ -11,7 +11,16 @@
     </head>
     <body class="black">
         <header class="white row col s12">
-            <h3 class="black-text col 12">Rocket Trades 🚀</h3>
+            <nav>
+                <div class="nav-wrapper white">
+                  <a href="#" class="brand-logo black-text">Rocket Trades 🚀</a>
+                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#" class="black-text">Popular Stocks</a></li>
+                    <li><a href="#" class="black-text">Popular Crypto</a></li>
+                    <li><a href="#" class="black-text">Portfolio</a></li>
+                  </ul>
+                </div>
+              </nav>
         </header>
         <main class="row">
             <aside class="col s12 m4 l3 grey darken-4">
@@ -48,18 +57,17 @@
                       </div>
                     </div>
             </aside>
-            <section class="col s12 m8 l9">
-                <section id="box" class="col s12 l6 card-panel black">
-                    <div id="widget1" class="col s12 card-panel black custom-shadow">
+            <section id="widgetContainer" class="col s12 m8 l9">
+                <section id="stockWidget" class="col s12 l6 card-panel black">
+                    <div id="widget1" class="col s12 card-panel black custom-shadow-stocks">
                         <h5 id="symbol1" class="cyan-text text-accent-2"></h5>
                         <h5 id="name1" class="cyan-text text-accent-2"></h5>
                         <h5 id="price1" class="cyan-text text-accent-2"></h5>
                         <h5 id="percent1" class="cyan-text text-accent-2"></h5>
                     </div>
                 </section>
-
-                <section id="box" class="col s12 l6 card-panel black">
-                    <div id="widget2" class="col s12 card-panel black">
+                <section id="cryptoWidget" class="col s12 l6 card-panel black">
+                    <div id="widget2" class="col s12 card-panel black custom-shadow-crypto">
                         <h5 id="symbol2" class="light-green-text text-accent-3"></h5>
                         <h5 id="name2" class="light-green-text text-accent-3"></h5>
                         <h5 id="price2" class="light-green-text text-accent-3"></h5>
