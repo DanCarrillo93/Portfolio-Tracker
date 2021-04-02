@@ -51,7 +51,7 @@ main {
 }
 .custom-margin {
 	margin: 1rem !important;
-}
+}	
 
 form div,
 form div input,
@@ -76,6 +76,9 @@ form div input,
     font-size: 2rem;
     padding-left: 1rem;
 }
+h2 {
+	font-size: 56px;
+}
 
 #popularStockTitle {
 	border-bottom: 2px solid var(--stock-color);
@@ -86,6 +89,41 @@ form div input,
 	border-bottom: 2px solid var(--crypto-color);
 	margin: 10px 13em;
 	padding: 10px;
+}
+@media only screen and (max-width: 1441px) {
+	#popularStockTitle {
+		margin: 10px 9em;
+	}
+	#popularCryptoTitle {
+		margin: 10px 9em;
+	}
+}
+@media only screen and (max-width: 1025px) {
+	#popularStockTitle {
+		margin: 10px 5em;
+	}
+	#popularCryptoTitle {
+		margin: 10px 5em;
+	}
+}
+@media only screen and (max-width: 769px) {
+	#popularStockTitle {
+		margin: 10px 3em;
+	}
+	#popularCryptoTitle {
+		margin: 10px 3em;
+	}
+}
+@media only screen and (max-width: 426px) {
+	#popularStockTitle {
+		margin: 10px -1em;
+	}
+	#popularCryptoTitle {
+		margin: 10px -1em;
+	}
+	h2 {
+		font-size: 42px;
+	}
 }
 
 #stockWidget,
