@@ -18,7 +18,6 @@ $(searchBox).submit(function(event){
     var cryptoSymbols = ["ETH", "BTC", "XRP", "DOGE", "LTC", "BSV", "ETC" ];
     var stockSymbols = ["TSLA", "AAPL", "AMC", "GME"];
 
-
     if ($.inArray(symbol, cryptoSymbols) >= 0) {
         var requestUrl = "https://api.lunarcrush.com/v2?data=assets&key=zf4yj43rpvlvhcn0ln2c&symbol=" + symbol;
         fetch(requestUrl)
