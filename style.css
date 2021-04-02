@@ -1,5 +1,5 @@
 .row {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 :root {
 	--crypto-color: #76ff03;
@@ -19,11 +19,10 @@
 }
 
 #widget1 {
-    border-radius: 10px;
-    border: 5px solid var(--stock-color);
-    margin-bottom: 7px;
-    transition: all 0.5s ease-in-out;
-
+	border-radius: 10px;
+	border: 5px solid var(--stock-color);
+	margin-bottom: 7px;
+	transition: all 0.5s ease-in-out;
 }
 
 #widget2 {
@@ -73,8 +72,8 @@ form div input,
 	transition: all 1s ease-in-out;
 }
 .custom-font {
-    font-size: 2rem;
-    padding-left: 1rem;
+	font-size: 2rem;
+	padding-left: 1rem;
 }
 h2 {
 	font-size: 56px;
@@ -129,4 +128,11 @@ h2 {
 #stockWidget,
 #cryptoWidget {
 	display: none;
+}
+
+.custom-flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
