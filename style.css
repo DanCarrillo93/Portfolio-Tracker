@@ -71,6 +71,10 @@ form div input,
     box-shadow: inset 0px 0px 8px var(--crypto-color), 0 0 15px var(--crypto-color);
     transition: all 1s ease-in-out;
 }
+.custom-font {
+    font-size: 2rem;
+    padding-left: 1rem;
+}
 
 #popularStockTitle {
     border-bottom: 2px solid var(--stock-color);
