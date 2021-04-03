@@ -1,13 +1,5 @@
 var searchBox = $("#searchBox");
 var userInput = $("#search");
-var symbol1 = $("#symbol1");
-var name1 = $("#name1");
-var price1 = $("#price1");
-var percent1 = $("#percent1");
-var symbol2 = $("#symbol2");
-var name2 = $("#name2");
-var price2 = $("#price2");
-var percent2 = $("#percent2");
 var cryptoSearchList = [];
 var stockSearchList = [];
 var currentStockSearches = [];
@@ -88,6 +80,7 @@ $("#widgetContainer").on("click", ".btn-save-crypto-widget", function (event) {
 	if (cryptoSearchList.indexOf(symbol) < 0) {
 		cryptoSearchList.push(symbol);
 		localStorage.setItem("Crypto", JSON.stringify(cryptoSearchList));
+		$(this).addClass("hidden");
 	}
 });
 
@@ -97,6 +90,7 @@ $("#widgetContainer").on("click", ".btn-save-stock-widget", function (event) {
 	if (stockSearchList.indexOf(symbol) < 0) {
 		stockSearchList.push(symbol);
 		localStorage.setItem("Stock", JSON.stringify(stockSearchList));
+		$(this).addClass("hidden");
 	}
 });
 
@@ -105,6 +99,7 @@ $("#widgetContainer").on("click", ".btn-remove-stock-widget", function (event) {
 	var symbol = $(this).attr("data-symbol");
 	stockSearchList.splice($.inArray(symbol, stockSearchList), 1);
 	localStorage.setItem("Stock", JSON.stringify(stockSearchList));
+	location.reload();
 });
 
 $("#widgetContainer").on(
@@ -115,6 +110,7 @@ $("#widgetContainer").on(
 		var symbol = $(this).attr("data-symbol");
 		cryptoSearchList.splice($.inArray(symbol, cryptoSearchList), 1);
 		localStorage.setItem("Crypto", JSON.stringify(cryptoSearchList));
+		location.reload();
 	}
 );
 
@@ -235,6 +231,8 @@ function reloadCryptoWidget() {
 		crypto.json().then(function (response) {
 			var widget = renderCrypto(response.data[0]);
 			$("#widgetContainer").append(widget);
+			$(".btn-save-crypto-widget").addClass("hidden");
+			$(".btn-remove-crypto-widget").addClass("display");
 		});
 	});
 }
@@ -249,6 +247,8 @@ function reloadStockWidget() {
 		stock.json().then(function (response) {
 			var widget = renderStock(response);
 			$("#widgetContainer").append(widget);
+			$(".btn-save-stock-widget").addClass("hidden");
+			$(".btn-remove-stock-widget").addClass("display");
 		});
 	});
 }

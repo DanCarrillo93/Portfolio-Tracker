@@ -52,7 +52,7 @@ main {
 }
 .custom-margin {
 	margin: 1rem !important;
-}	
+}
 
 form div,
 form div input,
@@ -62,6 +62,10 @@ form div input,
 
 .material-icons {
 	font-size: 25px !important;
+}
+
+.hidden {
+	display: none;
 }
 
 .custom-shadow-stocks:hover {
