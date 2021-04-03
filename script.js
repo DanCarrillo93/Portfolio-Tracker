@@ -48,7 +48,7 @@ function renderCrypto(cryptoAsset) {
         <h5 class="light-green-text text-accent-3">$ ${price}</h5>
         <div class="custom-flex">
             <h5 class="light-green-text text-accent-3">${change} %</h5>
-            <a class="btn-floating btn-medium waves-effect waves-light black custom-shadow-crypto">
+            <a class="btn-floating btn-medium waves-effect waves-light black custom-shadow-crypto btn-remove-crypto-widget">
                 <i class="material-icons light-green-text text-accent-3 custom-shadow-crypto">close</i>
             </a>
         </div>
@@ -74,7 +74,7 @@ function renderStock(stockAsset) {
         <h5 class="cyan-text text-accent-2">$ ${price}</h5>
         <div class="custom-flex">
             <h5 class="cyan-text text-accent-2">${change} %</h5>
-            <a class="btn-floating btn-medium waves-effect waves-light black custom-shadow-stocks">
+            <a class="btn-floating btn-medium waves-effect waves-light black custom-shadow-stocks btn-remove-stock-widget">
                 <i class="material-icons cyan-text text-accent-2 custom-shadow-stocks">close</i>
             </a>
         </div>
@@ -100,19 +100,29 @@ $("#widgetContainer").on("click", ".btn-save-stock-widget", function (event) {
 	}
 });
 
-$("#deleteStock").click(function (event) {
+$("#widgetContainer").on("click", ".btn-remove-stock-widget", function (event) {
 	event.preventDefault();
+	var symbol = $(this).attr("data-symbol");
+	stockSearchList.splice($.inArray(symbol, stockSearchList), 1);
+	localStorage.setItem("Stock", JSON.stringify(stockSearchList));
 });
 
-$("#deleteCrypto").click(function (event) {
-	event.preventDefault();
-});
+$("#widgetContainer").on(
+	"click",
+	".btn-remove-crypto-widget",
+	function (event) {
+		event.preventDefault();
+		var symbol = $(this).attr("data-symbol");
+		cryptoSearchList.splice($.inArray(symbol, cryptoSearchList), 1);
+		localStorage.setItem("Crypto", JSON.stringify(cryptoSearchList));
+	}
+);
 
-  // var requestUrl = "https://api.polygon.io/v1/meta/exchanges?&apiKey=yBB3Vfx_GJ9mjTReRC00QSFJrGspuOKt";
-        // requestUrl.open("GET", url, true);
-        // requestUrl.onload = function(){
-        //     console.log(requestUrl);
-        // }
+// var requestUrl = "https://api.polygon.io/v1/meta/exchanges?&apiKey=yBB3Vfx_GJ9mjTReRC00QSFJrGspuOKt";
+// requestUrl.open("GET", url, true);
+// requestUrl.onload = function(){
+//     console.log(requestUrl);
+// }
 
 callLocalStorage();
 $(searchBox).submit(function (event) {
