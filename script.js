@@ -108,6 +108,12 @@ $("#deleteCrypto").click(function (event) {
 	event.preventDefault();
 });
 
+  // var requestUrl = "https://api.polygon.io/v1/meta/exchanges?&apiKey=yBB3Vfx_GJ9mjTReRC00QSFJrGspuOKt";
+        // requestUrl.open("GET", url, true);
+        // requestUrl.onload = function(){
+        //     console.log(requestUrl);
+        // }
+
 callLocalStorage();
 $(searchBox).submit(function (event) {
 	event.preventDefault();
