@@ -114,19 +114,11 @@ $("#widgetContainer").on(
 	}
 );
 
-// var requestUrl = "https://api.polygon.io/v1/meta/exchanges?&apiKey=yBB3Vfx_GJ9mjTReRC00QSFJrGspuOKt";
-// requestUrl.open("GET", url, true);
-// requestUrl.onload = function(){
-//     console.log(requestUrl);
-// }
-
 callLocalStorage();
 $(searchBox).submit(function (event) {
 	event.preventDefault();
 	var symbol = userInput.val().toUpperCase();
 	$(searchBox).trigger("reset");
-	var cryptoSymbols = ["ETH", "BTC", "XRP", "DOGE", "LTC", "BSV", "ETC"];
-	var stockSymbols = ["TSLA", "AAPL", "AMC", "GME"];
 
 	if ($.inArray(symbol, cryptoSymbols) > -1) {
 		var requestUrl =
@@ -168,31 +160,6 @@ $(searchBox).submit(function (event) {
 	} else {
 		return;
 	}
-});
-
-$(document).ready(function () {
-	$("#search").autocomplete({
-		data: {
-			BTC: null,
-			ETH: null,
-			LTC: null,
-			BSV: null,
-			BCH: null,
-			DOGE: null,
-			ETC: null,
-			TSLA: null,
-			AAPL: null,
-			AMC: null,
-			GME: null,
-		},
-	});
-});
-
-$(document).ready(function () {
-	$(".modal").modal();
-});
-$(document).ready(function () {
-	$(".sidenav").sidenav();
 });
 
 function callLocalStorage() {
@@ -252,3 +219,244 @@ function reloadStockWidget() {
 		});
 	});
 }
+
+var cryptoSymbols = [
+	"ETH",
+	"BTC",
+	"XRP",
+	"DOGE",
+	"LTC",
+	"BSV",
+	"ETC",
+	"BNB",
+	"DOT",
+	"LINK",
+	"BCH",
+	"EOS",
+	"UNI",
+	"USDT",
+];
+var stockSymbols = [
+	"AAL",
+	"AAPL",
+	"ABNB",
+	"ACB",
+	"AMC",
+	"AMD",
+	"AMZN",
+	"APHA",
+	"ARKK",
+	"BA",
+	"BABA",
+	"BAC",
+	"BB",
+	"BLNK",
+	"BNGO",
+	"CTRM",
+	"CCIV",
+	"CCL",
+	"CGC",
+	"CPRX",
+	"CRON",
+	"DAL",
+	"DKNG",
+	"ET",
+	"F",
+	"FB",
+	"FCEL",
+	"FUBO",
+	"GE",
+	"GM",
+	"GME",
+	"GNUS",
+	"GOOGl",
+	"GPRO",
+	"GSAT",
+	"HEXO",
+	"IDEX",
+	"INO",
+	"IVR",
+	"JBLU",
+	"JNJ",
+	"KO",
+	"LUV",
+	"MGM",
+	"MRNA",
+	"MRO",
+	"NAK",
+	"NAKD",
+	"NCLH",
+	"NFLX",
+	"NIO",
+	"NKE",
+	"NKLA",
+	"NNDM",
+	"NOK",
+	"NRZ",
+	"NRZ",
+	"NVDA",
+	"OCGN",
+	"OGI",
+	"PENN",
+	"PFE",
+	"PLTR",
+	"PLUG",
+	"PSEC",
+	"PTON",
+	"PYPL",
+	"RBLX",
+	"RCL",
+	"RIOT",
+	"RYCEY",
+	"SAVE",
+	"SBUX",
+	"SENS",
+	"SIRI",
+	"SNAP",
+	"SNDL",
+	"SONY",
+	"SOS",
+	"SPCE",
+	"SPY",
+	"SQ",
+	"T",
+	"TLRY",
+	"TNXP",
+	"TSLA",
+	"TWTR",
+	"TXMD",
+	"UAL",
+	"UBER",
+	"VOO",
+	"VTI",
+	"WKHS",
+	"WMT",
+	"XOM",
+	"XPEV",
+	"ZM",
+];
+
+$(document).ready(function () {
+	$("#search").autocomplete({
+		data: {
+			ETH: null,
+			BTC: null,
+			XRP: null,
+			DOGE: null,
+			LTC: null,
+			BSV: null,
+			ETC: null,
+			BNB: null,
+			DOT: null,
+			LINK: null,
+			BCH: null,
+			EOS: null,
+			UNI: null,
+			USDT: null,
+			AAL: null,
+			AAPL: null,
+			ABNB: null,
+			ACB: null,
+			AMC: null,
+			AMD: null,
+			AMZN: null,
+			APHA: null,
+			ARKK: null,
+			BA: null,
+			BABA: null,
+			BAC: null,
+			BB: null,
+			BLNK: null,
+			BNGO: null,
+			CTRM: null,
+			CCIV: null,
+			CCL: null,
+			CGC: null,
+			CPRX: null,
+			CRON: null,
+			DAL: null,
+			DKNG: null,
+			ET: null,
+			F: null,
+			FB: null,
+			FCEL: null,
+			FUBO: null,
+			GE: null,
+			GM: null,
+			GME: null,
+			GNUS: null,
+			GOOGl: null,
+			GPRO: null,
+			GSAT: null,
+			HEXO: null,
+			IDEX: null,
+			INO: null,
+			IVR: null,
+			JBLU: null,
+			JNJ: null,
+			KO: null,
+			LUV: null,
+			MGM: null,
+			MRNA: null,
+			MRO: null,
+			NAK: null,
+			NAKD: null,
+			NCLH: null,
+			NFLX: null,
+			NIO: null,
+			NKE: null,
+			NKLA: null,
+			NNDM: null,
+			NOK: null,
+			NRZ: null,
+			NRZ: null,
+			NVDA: null,
+			OCGN: null,
+			OGI: null,
+			PENN: null,
+			PFE: null,
+			PLTR: null,
+			PLUG: null,
+			PSEC: null,
+			PTON: null,
+			PYPL: null,
+			RBLX: null,
+			RCL: null,
+			RIOT: null,
+			RYCEY: null,
+			SAVE: null,
+			SBUX: null,
+			SENS: null,
+			SIRI: null,
+			SNAP: null,
+			SNDL: null,
+			SONY: null,
+			SOS: null,
+			SPCE: null,
+			SPY: null,
+			SQ: null,
+			T: null,
+			TLRY: null,
+			TNXP: null,
+			TSLA: null,
+			TWTR: null,
+			TXMD: null,
+			UAL: null,
+			UBER: null,
+			VOO: null,
+			VTI: null,
+			WKHS: null,
+			WMT: null,
+			XOM: null,
+			XPEV: null,
+			ZM: null,
+		},
+	});
+});
+
+$(document).ready(function () {
+	$(".modal").modal();
+});
+$(document).ready(function () {
+	$(".sidenav").sidenav();
+});
