@@ -18,17 +18,18 @@
 	margin-bottom: 1rem;
 }
 
-#widget1 {
+.card-stock {
 	border-radius: 10px;
 	border: 5px solid var(--stock-color);
 	margin-bottom: 7px;
 	transition: all 0.5s ease-in-out;
 }
 
-#widget2 {
+.card-crypto {
 	border-radius: 10px;
 	border: 5px solid var(--crypto-color);
 	margin-bottom: 7px;
+	transition: all 0.5s ease-in-out;
 }
 
 main {
@@ -123,11 +124,6 @@ h2 {
 	h2 {
 		font-size: 42px;
 	}
-}
-
-#stockWidget,
-#cryptoWidget {
-	display: none;
 }
 
 .custom-flex {
