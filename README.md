@@ -29,9 +29,10 @@ Example of widgets:
 <img width="1259" alt="Screen Shot 2021-04-04 at 19 16 33" src="https://user-images.githubusercontent.com/64762408/113530222-533d3100-957a-11eb-96dc-3ac907e5cc16.png">
 
 Popular Stocks:
-![image](https://user-images.githubusercontent.com/64762408/113604947-d3a37680-95fa-11eb-916b-2acf6d289d83.png)
+![image](https://user-images.githubusercontent.com/64762408/113609854-3861cf80-9601-11eb-97d6-022c0c2717ae.png)
 
 Popular Cryptocurrencies:
-![image](https://user-images.githubusercontent.com/64762408/113606832-60e7ca80-95fd-11eb-94a8-0e4c2946b19c.png)
+![image](https://user-images.githubusercontent.com/64762408/113609957-5af3e880-9601-11eb-9c8e-f206e17f0510.png)
+
 
 
