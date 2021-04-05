@@ -269,7 +269,7 @@ var stockSymbols = [
 	"GM",
 	"GME",
 	"GNUS",
-	"GOOGl",
+	"GOOGL",
 	"GPRO",
 	"GSAT",
 	"HEXO",
