@@ -52,7 +52,7 @@ function renderStock(stockAsset) {
     <div class="col s12 card-panel black custom-shadow-stocks card-stock">
         <div class="custom-flex">
             <h5 class="cyan-text text-accent-2">${symbol}</h5>
-            <a data-symbol=${symbol} class="btn-floating btn-medium waves-effect waves-light black custom-shadow-stocks btn-save-stock-widget">
+            <a data-symbol=${symbol} class="btn-floating btn-medium waves-effect waves-light black custom-shadow-stocks">
                 <i class="material-icons cyan-text text-accent-2 custom-shadow-stocks">add</i>
             </a>
         </div>
@@ -60,7 +60,7 @@ function renderStock(stockAsset) {
         <h5 class="cyan-text text-accent-2">$ ${price}</h5>
         <div class="custom-flex">
             <h5 class="cyan-text text-accent-2">${change} %</h5>
-            <a class="btn-floating btn-medium waves-effect waves-light black custom-shadow-stocks btn-remove-stock-widget">
+            <a class="btn-floating btn-medium waves-effect waves-light black custom-shadow-stocks">
                 <i class="material-icons cyan-text text-accent-2 custom-shadow-stocks">close</i>
             </a>
         </div>
