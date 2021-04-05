@@ -36,7 +36,6 @@ for (i = 0; i < 9; i += 1) {
 	var requestUrl =
 		"https://api.lunarcrush.com/v2?data=assets&key=zf4yj43rpvlvhcn0ln2c&symbol=" +
 		cryptoSymbols[i];
-	console.log(requestUrl);
 	fetch(requestUrl).then(function (crypto) {
 		crypto.preventDefault;
 		crypto.json().then(function (response) {
@@ -71,3 +70,6 @@ function renderCrypto(cryptoAsset) {
     </div>
     </section>`);
 }
+$(document).ready(function () {
+	$(".sidenav").sidenav();
+});
