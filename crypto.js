@@ -55,17 +55,11 @@ function renderCrypto(cryptoAsset) {
     <div class="col s12 card-panel black custom-shadow-crypto card-crypto">
         <div class="custom-flex">
             <h5 class="light-green-text text-accent-3">${symbol}</h5>
-            <a data-symbol=${symbol} class="btn-floating btn-medium waves-effect waves-light black custom-shadow-crypto">
-                <i class="material-icons light-green-text text-accent-3 custom-shadow-crypto">add</i>
-            </a>
         </div>
         <h5 class="light-green-text text-accent-3">${name}</h5>
         <h5 class="light-green-text text-accent-3">$ ${price}</h5>
         <div class="custom-flex">
             <h5 class="light-green-text text-accent-3">${change} %</h5>
-            <a class="btn-floating btn-medium waves-effect waves-light black custom-shadow-crypto">
-                <i class="material-icons light-green-text text-accent-3 custom-shadow-crypto">close</i>
-            </a>
         </div>
     </div>
     </section>`);
