@@ -6,10 +6,10 @@ The idea behind Rocket Trades is simple, we want to help the investors to follow
 
 
 ## Credits
-Collaborators of the project (GitHub profile):
-Javier Perez (javierperez98)
-Daniel Carrillo (DanCarrillo93)
-Christian Payan (ChrisPayan)
+Collaborators of the project (GitHub profile): <br>
+Javier Perez (javierperez98) <br>
+Daniel Carrillo (DanCarrillo93) <br>
+Christian Payan (ChrisPayan)<br>
 Ryan Anderson (Ryansswell)
 
 IEX Cloud - https://iexcloud.io/docs/api/
