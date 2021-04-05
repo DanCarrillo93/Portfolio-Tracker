@@ -137,3 +137,7 @@ h2 {
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
+
+a {
+	color: inherit;
+}
