@@ -32,7 +32,6 @@ for (i = 0; i < 9; i += 1) {
 		"https://cloud.iexapis.com/stable/stock/" +
 		stockSymbols[i] +
 		"/quote?token=pk_639e8892a36f446eb4aa5d54c433e9af";
-	console.log(requestUrl);
 	fetch(requestUrl).then(function (stock) {
 		stock.preventDefault;
 		stock.json().then(function (response) {
@@ -67,3 +66,6 @@ function renderStock(stockAsset) {
     </div>
     </section>`);
 }
+$(document).ready(function () {
+	$(".sidenav").sidenav();
+});
